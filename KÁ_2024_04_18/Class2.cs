@@ -59,5 +59,9 @@ namespace KÁ_2024_04_18
             return Eredmeny;
         }
 
+        public static void Save(Eredmenyek eredmenyek)
+        {
+
+        }
     }
 }
