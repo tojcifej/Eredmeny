@@ -16,5 +16,11 @@ namespace KÁ_2024_04_18
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            EredmenyekRepo.path = "eredmenyek.txt";
+            dataGridView_main.DataSource = EredmenyekRepo.FindAll();
+        }
     }
 }
