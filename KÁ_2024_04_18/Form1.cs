@@ -29,5 +29,24 @@ namespace KÁ_2024_04_18
         {
             dataGridView_main.DataSource = EredmenyekRepo.FindAllBySearch("", "", comboBox_targy.SelectedItem.ToString(), "", comboBox_erdemjegy.SelectedItem.ToString());
         }
+
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                EredmenyekRepo.path = openFileDialog1.FileName;
+                dataGridView_main.DataSource = EredmenyekRepo.FindAllBySearch("", "", comboBox_targy.SelectedItem.ToString(), "", comboBox_erdemjegy.SelectedItem.ToString());
+            }
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Eredmenyek 1.0\nKrauter Ádám tualjdona csak Krauter Ádám nyúlhato hozzá aki nem más mint Krauter Ádám");
+        }
     }
 }
